@@ -1,0 +1,494 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: x-large;
+  font-weight: 300px;
+}
+/* Estilo do corpo da página */
+body {
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(223, 212, 198);
+  width: 100%;
+  display: block;
+}
+header {
+  background-color: #fff;
+  position: sticky;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  margin-top: 0.3cm;
+  padding: 0.5rem;
+  width: 68px;
+  height: 50px;
+}
+.logo h1 {
+  color: rgb(220, 64, 7);
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+a {
+  color: rgb(203, 87, 45);
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: bold;
+}
+a:houver {
+  opacity: 0.7;
+}
+a:hover {
+  color: #2c0c33;
+}
+nav {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  height: 8vh;
+  width: 100%;
+}
+main {
+  background: url("br.jpg") no-repeat center center;
+  background-size: cover;
+  height: 92vh;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  justify-content: space-around;
+  letter-spacing: 3px;
+  margin-left: 50px;
+  padding: 0.3rem;
+  text-align: center;
+}
+.contatos img {
+  margin-top: 0.3cm;
+  margin-left: 0;
+  margin-right: 0;
+  width: 70px;
+  height: 50px;
+}
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: rgb(203, 87, 45);
+  margin: 8px;
+  transition: 0.2s;
+}
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+    display: block;
+  }
+  .header {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: block;
+  }
+  .logo h1 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.1s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .container {
+    max-width: 90%;
+    margin: 0;
+    padding: 0px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    box-shadow: 20px 20px 50px -30px #2c0c33;
+    flex-direction: column;
+    border-top-left-radius: 8px;
+  }
+  .container img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .container div.estrela {
+    flex-direction: column;
+  }
+  .container div.star {
+    flex-direction: column;
+  }
+  .container .estrela dialog#Popup {
+    position: absolute;
+    left: 10%;
+    right:10%;
+  }
+  .container div.estrela dialog#Popup button {
+    background-color: rgb(220, 64, 7);
+  }
+  .container div.estrela dialog#Popup button:hover {
+    background-color: #2c0c33;
+    color: rgb(220, 64, 7);
+  }
+  .conteudo {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    margin: 0;
+    padding: 0px;
+  }
+}
+.nav-list.active {
+  transform: translateX(0);
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+section.container {
+  background-color: white;
+  display: flex;
+  text-align: justify;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 20px 20px 50px -30px #2c0c33;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  font-size: clamp(8px, 4vw, 16px);
+}
+section.container div.estrela {
+  flex-direction: column;
+  padding: 1rem;
+ 
+}
+div.star {
+  text-align: right;
+  margin: 0;
+}
+.estrela input[type="radio"] {
+  display: none;
+}
+.estrela label i.fa:before {
+  content: "\f005";
+  color: #fc0;
+}
+.estrela input[type="radio"]:checked ~ label i.fa:before {
+  color: #ccc;
+}
+section.container div.icon {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  float: left;
+  border-radius: 8px;
+}
+section.container div.icon img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease;
+  border-radius: 8px;
+}
+section.container div.icon img:hover {
+  transform: scale(1.1);
+}
+section.container div.estrela h1 {
+  color: rgb(220, 64, 7);
+  text-align: justify;
+  text-align: center;
+  padding: 0.3rem;
+}
+section.container div.estrela p {
+  color: black;
+  margin-top: 5px;
+  text-align: justify;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  font-weight: 450;
+  font-size: clamp(8px, 4vw,);
+  
+}
+/* div completa */
+section.container div.estrela div.seletor {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+/* valor */
+section.container div.estrela div.seletor p.valor {
+  text-align: center;
+ 
+}
+/* seletor */
+section.container div.estrela div.seletor button {
+  text-transform: uppercase;
+  background-color: rgb(220, 64, 7);
+  color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  padding: 0.1rem 0.3rem;
+  font-size: 10px;
+  text-align: center;
+  justify-content: center;
+  width: auto;
+  border-radius: 8px;
+}
+section.container div.estrela div.seletor button:hover {
+  background-color: #2c0c33;
+  transform: scale(1.1);
+}
+/* botão quantidade */
+section.container div.estrela div.seletor input {
+  width: 35px;
+  height: 25px;
+  padding-top: 2px;
+  text-align: center;
+  border: 1px solid #0e0c0c;
+  font-size: small;
+  border-radius: 8px;
+}
+sup {
+  color: rgb(220, 64, 7);
+  font-weight: bold;
+  font-size: 65%;
+}
+/* botão de comprar */
+section.container div.estrela div.seletor button.comprar {
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  padding-top: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  transition: transform 0.3s ease;
+  background-color: rgb(220, 64, 7);
+  border: 0;
+  border-radius: 8px;
+}
+section.container div.estrela div.seletor button.comprar:hover {
+  background-color: #2c0c33;
+  color: rgb(203, 87, 45);
+}
+section.container div.estrela dialog::backdrop {
+  background-color: rgb(119, 119, 119, 0.4);
+}
+
+section.container div.estrela dialog {
+  align-items: center;
+}
+section.container div.estrela dialog img {
+  width: 40%;
+}
+section.container div.estrela dialog#Popup {
+  background-color: white;
+  justify-content: center;
+  border-radius: 32px;
+  border: none;
+  margin: auto;
+  padding: 1rem;
+}
+section.container div.estrela dialog#Popup h2 {
+  margin: auto;
+  color: orangered;
+  font-size: xx-large;
+}
+section.container div.estrela dialog#Popup p {
+  margin: auto;
+  color: black;
+  font-size: 70%;
+  text-align: center;
+}
+section.container div.estrela dialog#Popup button {
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  background-color: rgb(220, 64, 7);
+  justify-content: center;
+  color: #fff;
+  transition: background-color 0.3s;
+  transition: transform 0.3s ease;
+  font-size: 18px;
+  padding: 6px;
+  width: 30%;
+  margin-top: 20px;
+}
+section.container div.estrela dialog#Popup button:hover {
+  background-color: #2c0c33;
+  color: rgb(220, 64, 7);
+}
+
+/* conteudo site  */
+.conteudo {
+  justify-content: center;
+  text-align: justify;
+  align-items: center;
+  margin: auto;
+  padding: 1rem;
+}
+.conteudo-texto {
+  margin: 15px 15px 15px 15px;
+}
+.conteudo-texto h2 {
+  color: rgb(220, 64, 7);
+  text-align: center;
+  margin: 15px 15px 15px 15px;
+  font-weight: bold;
+}
+.conteudo-texto p {
+  margin: 15px 15px 15px 15px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 20px 20px 50px -30px #2c0c33;
+  transition: transform 0.2s ease;
+  max-width: 93%;
+  max-height: 80%;
+}
+.conteudo-texto p:hover {
+  transform: scale(1.1);
+}
+.conteudo-texto ul {
+  margin: 15px 15px 15px 15px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 20px 20px 50px -30px #2c0c33;
+  transition: transform 0.2s ease;
+  max-width: 93%;
+  max-height: 80%;
+}
+.conteudo-texto ul:hover {
+  transform: scale(1.1);
+}
+.conteudo-texto li {
+  list-style: none;
+}
+footer {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin: 15px 15px 15px 15px;
+}
+footer h1 {
+  background-color: rgb(203, 87, 45);
+  color: #fff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.container-footer {
+  display: flex;
+  background-color: #fff;
+  text-align: center;
+  font-size: clamp(8px, 4vw, 16px);
+  padding: 1rem;
+}
+.container-footer li {
+  font-size: clamp(4px, 4vw, 16px);
+  font-weight: bold;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+  margin: 15px 0px 0px 75px;
+  width: 170px;
+  text-align: center;
+}
+.container-footer li:hover {
+  color: rgb(203, 87, 45);
+}
+.container-footer p {
+  border-left: 3px solid rgb(203, 87, 45);
+  text-align: justify;
+  columns: 1;
+  font-size: clamp(8px, 4vw, 16px);
+  font-weight: bold;
+  padding: 2rem;
+  text-align: justify;
+  flex-wrap: wrap;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+  margin: 15px 0px 0px 15px;
+}
+.container-footer p:hover {
+  color: rgb(203, 87, 45);
+}
+@media screen and (max-width: 600px) {
+  .container-footer {
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+  }
+  .container-footer li {
+    margin: auto;
+  }
+  .container-footer p {
+    flex-direction: column;
+    font-size: clamp(8px, 4vw, 16px);
+    padding: 1rem;
+    margin: 15px 15px 15px 15px;
+    flex-direction: column;
+    border-left: 3px solid rgb(203, 87, 45);
+  }
+  .container-footer p:hover {
+    background-color: antiquewhite;
+    color: rgb(203, 87, 45);
+  }
+}
