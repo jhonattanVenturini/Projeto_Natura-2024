@@ -150,9 +150,7 @@ main {
     flex-direction: column;
   }
   .container .estrela dialog#Popup {
-    position: absolute;
-    left: 10%;
-    right:10%;
+    margin: auto;
   }
   .container div.estrela dialog#Popup button {
     background-color: rgb(220, 64, 7);
